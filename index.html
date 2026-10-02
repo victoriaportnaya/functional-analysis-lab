@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf0">
+  <meta name="description" content="A bright illustrated functional analysis course with rigorous LaTeX theorems, worked proofs, interactive models, and practice.">
+  <title>Functional Analysis Lab</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles-v2.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="vendor/katex/contrib/auto-render.min.js" defer></script>
+  <script src="curriculum.js" defer></script>
+  <script src="app-v2.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Course navigation">
+      <div class="brand"><span class="brand-mark">∑</span><div><strong>Functional<br>Analysis Lab</strong><small>Read · try · prove</small></div></div>
+      <div class="sidebar-label">YOUR ROUTE</div>
+      <nav id="chapter-nav" aria-label="Chapters"></nav>
+      <div class="sidebar-bottom"><div class="progress-text"><span>Course progress</span><strong id="progress-count">0 / 6</strong></div><div class="progress-track"><div id="progress-bar"></div></div><p>Progress is saved in this browser.</p></div>
+    </aside>
+    <main id="main" class="main">
+      <header class="topbar"><button id="mobile-menu" class="mobile-menu" aria-label="Toggle chapters" aria-expanded="false">☰</button><span class="topbar-title">Study workspace</span><span class="course-tag">KSE lectures 01–05 + supplement</span></header>
+      <div class="content-wrap">
+        <div id="chapter-header"></div>
+        <div class="tab-row" role="tablist" aria-label="Study modes">
+          <button type="button" class="tab active" data-tab="learn" role="tab" aria-selected="true">Learn</button>
+          <button type="button" class="tab" data-tab="solve" role="tab" aria-selected="false">Problem solver</button>
+          <button type="button" class="tab" data-tab="practice" role="tab" aria-selected="false">Practice</button>
+          <button type="button" class="tab" data-tab="sources" role="tab" aria-selected="false">Lecture map</button>
+        </div>
+        <div id="panel" role="tabpanel" tabindex="-1"></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
